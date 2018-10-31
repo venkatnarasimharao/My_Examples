@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snappy Scroll</title>
+    <style>
+        body{
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+        .first{
+            background-color: yellow;
+            color: black;
+            text-align: center;
+            height: 100vh;
+            border: 10px solid red;
+            border-radius: 20px;
+            margin: 20px;
+            scroll-snap-align: start;
+        }
+        .second{
+            background-color: #00E676;
+            color: black;
+            text-align: center;
+            height: 100vh;
+            border: 10px solid red;
+            border-radius: 20px;
+            margin: 20px;
+            scroll-snap-align: start;
+        }
+        .third{
+            background-color: #00acc1;
+            color: black;
+            text-align: center;
+            height: 100vh;
+            border: 10px solid red;
+            border-radius: 20px;
+            margin: 20px;
+            scroll-snap-align: start;
+        }
+        .four{
+            background-color: #01ec78;
+            color: black;
+            text-align: center;
+            height: 100vh;
+            border: 10px solid red;
+            border-radius: 20px;
+            margin: 20px;
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body>
+
+<div class="first">
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto dicta iste itaque labore molestiae obcaecati ut? Fugiat fugit, officiis?</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam cum esse et, facilis necessitatibus nisi officiis praesentium provident quaerat quis quos rem soluta sunt tenetur vel voluptatem, voluptatum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquam assumenda at atque consectetur deleniti dolores, ea eius eligendi ex excepturi explicabo facilis incidunt ipsam iure laudantium molestiae nemo obcaecati officia perspiciatis porro qui quo quod repellat, rerum sapiente suscipit tempora temporibus ullam. Adipisci error impedit obcaecati? Molestias, nulla!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores assumenda, doloribus eos fugit inventore iure modi neque provident recusandae. Adipisci alias amet animi aperiam at corporis cum dicta distinctio dolores doloribus enim hic id ipsa laboriosam minima nemo non odio perferendis porro, possimus quis recusandae, rerum saepe sed totam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis doloremque, dolorum et harum, minima obcaecati officiis ratione recusandae repudiandae sapiente similique vel. Aliquam eligendi expedita ipsum magni natus, praesentium rem sint voluptates! Architecto esse ipsum, molestias praesentium repudiandae totam!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis dignissimos dolorem dolores ducimus eaque eligendi eos est eum illum magnam maiores minima modi molestias necessitatibus nihil, odit omnis optio porro praesentium quae quaerat quas repellat reprehenderit sed vel vero!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolores illum laudantium nisi. A, adipisci consequatur corporis cupiditate delectus, dignissimos esse iste necessitatibus non nostrum officia praesentium ratione reiciendis repellat sapiente tempore vitae! Modi non quam ratione. Aliquam asperiores autem debitis deserunt dicta dolore, eligendi eos eveniet explicabo impedit itaque labore minus molestiae rem repudiandae sunt voluptate voluptatem! Autem dolorem explicabo illo, iusto magni sequi. Accusantium eos expedita fuga quas rerum. Ad animi aperiam beatae corporis debitis doloremque earum, et fugiat illo labore, nam, perspiciatis quasi saepe temporibus veritatis. Omnis quisquam repudiandae tempora ullam. Commodi cupiditate optio porro rerum sit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi culpa dolor eum eveniet illum in incidunt labore laborum magnam maiores maxime nihil officia optio, placeat praesentium quis tenetur velit.</p>
+</div>
+
+<div class="second">
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto dicta iste itaque labore molestiae obcaecati ut? Fugiat fugit, officiis?</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda officia pariatur rerum similique vel vitae voluptatem! Doloribus excepturi numquam praesentium repellat vitae. Distinctio excepturi in ipsam labore laborum perferendis quidem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam cum esse et, facilis necessitatibus nisi officiis praesentium provident quaerat quis quos rem soluta sunt tenetur vel voluptatem, voluptatum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquam assumenda at atque consectetur deleniti dolores, ea eius eligendi ex excepturi explicabo facilis incidunt ipsam iure laudantium molestiae nemo obcaecati officia perspiciatis porro qui quo quod repellat, rerum sapiente suscipit tempora temporibus ullam. Adipisci error impedit obcaecati? Molestias, nulla!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores assumenda, doloribus eos fugit inventore iure modi neque provident recusandae. Adipisci alias amet animi aperiam at corporis cum dicta distinctio dolores doloribus enim hic id ipsa laboriosam minima nemo non odio perferendis porro, possimus quis recusandae, rerum saepe sed totam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis doloremque, dolorum et harum, minima obcaecati officiis ratione recusandae repudiandae sapiente similique vel. Aliquam eligendi expedita ipsum magni natus, praesentium rem sint voluptates! Architecto esse ipsum, molestias praesentium repudiandae totam!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis dignissimos dolorem dolores ducimus eaque eligendi eos est eum illum magnam maiores minima modi molestias necessitatibus nihil, odit omnis optio porro praesentium quae quaerat quas repellat reprehenderit sed vel vero!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolores illum laudantium nisi. A, adipisci consequatur corporis cupiditate delectus, dignissimos esse iste necessitatibus non nostrum officia praesentium ratione reiciendis repellat sapiente tempore vitae! Modi non quam ratione. Aliquam asperiores autem debitis deserunt dicta dolore, eligendi eos eveniet explicabo impedit itaque labore minus molestiae rem repudiandae sunt voluptate voluptatem! Autem dolorem explicabo illo, iusto magni sequi. Accusantium eos expedita fuga quas rerum. Ad animi aperiam beatae corporis debitis doloremque earum, et fugiat illo labore, nam, perspiciatis quasi saepe temporibus veritatis. Omnis quisquam repudiandae tempora ullam. Commodi cupiditate optio porro rerum sit?</p>
+</div>
+
+<div class="third">
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto dicta iste itaque labore molestiae obcaecati ut? Fugiat fugit, officiis?</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eos et explicabo facere natus officiis praesentium rem, velit? Accusantium animi, aut debitis deleniti ea facilis libero quasi ut voluptas voluptates!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam cum esse et, facilis necessitatibus nisi officiis praesentium provident quaerat quis quos rem soluta sunt tenetur vel voluptatem, voluptatum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquam assumenda at atque consectetur deleniti dolores, ea eius eligendi ex excepturi explicabo facilis incidunt ipsam iure laudantium molestiae nemo obcaecati officia perspiciatis porro qui quo quod repellat, rerum sapiente suscipit tempora temporibus ullam. Adipisci error impedit obcaecati? Molestias, nulla!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores assumenda, doloribus eos fugit inventore iure modi neque provident recusandae. Adipisci alias amet animi aperiam at corporis cum dicta distinctio dolores doloribus enim hic id ipsa laboriosam minima nemo non odio perferendis porro, possimus quis recusandae, rerum saepe sed totam.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis doloremque, dolorum et harum, minima obcaecati officiis ratione recusandae repudiandae sapiente similique vel. Aliquam eligendi expedita ipsum magni natus, praesentium rem sint voluptates! Architecto esse ipsum, molestias praesentium repudiandae totam!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis dignissimos dolorem dolores ducimus eaque eligendi eos est eum illum magnam maiores minima modi molestias necessitatibus nihil, odit omnis optio porro praesentium quae quaerat quas repellat reprehenderit sed vel vero!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolores illum laudantium nisi. A, adipisci consequatur corporis cupiditate delectus, dignissimos esse iste necessitatibus non nostrum officia praesentium ratione reiciendis repellat sapiente tempore vitae! Modi non quam ratione. Aliquam asperiores autem debitis deserunt dicta dolore, eligendi eos eveniet explicabo impedit itaque labore minus molestiae rem repudiandae sunt voluptate voluptatem! Autem dolorem explicabo illo, iusto magni sequi. Accusantium eos expedita fuga quas rerum. Ad animi aperiam beatae corporis debitis doloremque earum, et fugiat illo labore, nam, perspiciatis quasi saepe temporibus veritatis. Omnis quisquam repudiandae tempora ullam. Commodi cupiditate optio porro rerum sit?</p>
+</div>
+
+<div class="four">
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto dicta iste itaque labore molestiae obcaecati ut? Fugiat fugit, officiis?</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam cum esse et, facilis necessitatibus nisi officiis praesentium provident quaerat quis quos rem soluta sunt tenetur vel voluptatem, voluptatum!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquam assumenda at atque consectetur deleniti dolores, ea eius eligendi ex excepturi explicabo facilis incidunt ipsam iure laudantium molestiae nemo obcaecati officia perspiciatis porro qui quo quod repellat, rerum sapiente suscipit tempora temporibus ullam. Adipisci error impedit obcaecati? Molestias, nulla!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores assumenda, doloribus eos fugit inventore iure modi neque provident recusandae. Adipisci alias amet animi aperiam at corporis cum dicta distinctio dolores doloribus enim hic id ipsa laboriosam minima nemo non odio perferendis porro, possimus quis recusandae, rerum saepe sed totam.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis doloremque, dolorum et harum, minima obcaecati officiis ratione recusandae repudiandae sapiente similique vel. Aliquam eligendi expedita ipsum magni natus, praesentium rem sint voluptates! Architecto esse ipsum, molestias praesentium repudiandae totam!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis dignissimos dolorem dolores ducimus eaque eligendi eos est eum illum magnam maiores minima modi molestias necessitatibus nihil, odit omnis optio porro praesentium quae quaerat quas repellat reprehenderit sed vel vero!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolores illum laudantium nisi. A, adipisci consequatur corporis cupiditate delectus, dignissimos esse iste necessitatibus non nostrum officia praesentium ratione reiciendis repellat sapiente tempore vitae! Modi non quam ratione. Aliquam asperiores autem debitis deserunt dicta dolore, eligendi eos eveniet explicabo impedit itaque labore minus molestiae rem repudiandae sunt voluptate voluptatem! Autem dolorem explicabo illo, iusto magni sequi. Accusantium eos expedita fuga quas rerum. Ad animi aperiam beatae corporis debitis doloremque earum, et fugiat illo labore, nam, perspiciatis quasi saepe temporibus veritatis. Omnis quisquam repudiandae tempora ullam. Commodi cupiditate optio porro rerum sit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam cum esse et, facilis necessitatibus nisi officiis praesentium provident quaerat quis quos rem soluta sunt tenetur vel voluptatem, voluptatum!
+        Lorem ipsum dolorsit amet, consectetur adipisicing elit. A ab aliquam cum esse et, facilis necessitatibus nisi officiis praesentium provident quaerat quis qu</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolores illum laudantium nisi. A, adipisci consequatur corporis cupiditate delectus, dignissimos esse iste necessitatibus non nostrum officia praesentium ratione reiciendis repellat sapiente tempore vitae! Modi non quam ratione. Aliquam asperiores autem debitis deserunt dicta dolore, eligendi eos eveniet explicabo impedit itaque labore minus molestiae rem repudiandae sunt voluptate voluptatem! Autem dolorem explicabo illo, iusto magni sequi. Accusantium eos expedita fuga quas rerum. Ad animi aperiam beatae corporis debitis doloremque earum, et fugiat illo labore, nam, perspiciatis quasi saepe temporibus veritatis. Omnis quisquam repudiandae tempora ullam. Commodi cupiditate optio porro rerum sit?</p>
+
+</div>
+
+</body>
+</html>
