@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .th
+        {
+            background-color: blue;
+            color: white;
+        }
+        .odd
+        {
+            background-color: darkcyan;
+            color: white;
+        }
+        .even
+        {
+            background-color: darkgreen;
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js">
+    </script>
+</head>
+<body ng-app>
+<div ng-init="products=[{Id:1,Name:'TV'},{Id:2,Name:'Mobile'},{Id:3,Name:'Boot'},{Id:4,Name:'Shoe'}]">
+    <table align="center" width="400" border="1">
+        <caption><b>Even Number</b></caption>
+
+        <th ng-class="'th'">Product Id</th>
+        <th ng-class="'th'">Product Name</th>
+        <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="item in products">
+            <td>{{item.Id}}</td>
+            <td>{{item.Name}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
