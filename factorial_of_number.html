@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial of a given number</title>
+</head>
+<body>
+	<h1 id="answer"></h1>
+<script type="text/javascript">
+		var no=prompt("enter number");
+	    var fact=1;
+		function f(){
+			for(var i=1; i<=no; i++){
+				fact=fact*i;
+			}
+			document.getElementById("answer").innerHTML=fact;
+		}f();
+</script>
+</body>
+</html>
