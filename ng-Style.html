@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        dt{
+            font-weight: bold;
+            border: darkgreen;
+            font-style: italic;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app=angular.module('DemoApp',[]);
+        app.controller('HomeController',function ($scope)
+        {
+          $scope.stylesheet={"background-color":"red","color":"white","text-align":"left"}
+          $scope.ApplayEffects=function ()
+          {
+              $scope.styleobject={"background-color":$scope.background,"color":"white","text-align":$scope.alignments}
+
+
+          }
+        })
+    </script>
+</head>
+<body ng-app="DemoApp" ng-controller="HomeController">
+<fieldset>
+    <legend>Select Effects</legend>
+    <dl>
+        <dt>Background color</dt>
+        <dd>
+            <select ng-model="background">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </dd>
+        <dt>
+            select alignments
+        </dt>
+        <dd>
+            <input type="radio" name="align" value="left" ng-model="alignments">left
+            <input type="radio" name="align" value="center" ng-model="alignments">center
+            <input type="radio" name="align" value="Right" ng-model="alignments">Right
+        </dd>
+        <br>
+        <button ng-click="ApplayEffects()">Applay Effects</button>
+    </dl>
+</fieldset>
+<h2 ng-style="styleobject"><i>Welcome to angular js</i></h2>
+
+</body>
+</html>
