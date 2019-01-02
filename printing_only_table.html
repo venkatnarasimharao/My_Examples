@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <h1>narasimha</h1>
+    <button onclick="printData()">print</button>
+    <table border="1" cellpadding="3" id="printTable">
+        <tbody><tr>
+            <th>First Name</th>
+            <th>Last Name</th>      
+            <th>Points</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>      
+            <td>50</td>
+        </tr>
+    </tbody></table>
+    <script>
+    function printData(){
+   var divToPrint=document.getElementById("printTable");
+   newWin= window.open("");
+   newWin.document.write(divToPrint.outerHTML);
+   newWin.print();
+}
+</script>
+</html>
