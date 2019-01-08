@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>example</title>
+	<style type="text/css">
+		button{
+			padding: 10px 20px;
+			border-radius: 10px;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="fun_one()">Substring</button>
+	<button onclick="fun_two()">Substr</button>
+	<h1 id="name"></h1>
+	<h1 id="name2"></h1>
+<script type="text/javascript">
+	function fun_one(){
+	var str="narasimha";
+	var output=str.substring(1,5);          /*it returns new str but not end letter*/
+	document.getElementById("name").innerHTML=output;
+	}
+	function fun_two(){
+		var stri="venkat";
+		var op2=stri.substr(1,5);           /*it returns new string with last letter also*/
+		document.getElementById("name2").innerHTML=op2;
+	}
+</script>
+</body>
+</html>
