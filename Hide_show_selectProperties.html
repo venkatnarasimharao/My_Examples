@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <style type="text/css">
+        .exampleSubselect {
+            display: none;
+        }
+        </style>
+</head>
+<body>
+        <select id="exampleCourse">
+                <option value="">-- Please Select --</option>
+                <option>Supply</option>
+                <option>Regular</option>
+            </select>
+            <select  id="exampleRegular" class="exampleSubselect">
+                <option value="1500">1500</option>
+            </select>
+            <br><br>
+            <div id="exampleSupply" class="exampleSubselect">
+                EMFT: <input type="checkbox" value="EMFT">
+                DES: <input type="checkbox" value="DES">
+            </div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#exampleCourse').change(function() {
+        var val = $('#exampleCourse').val();
+        $('.exampleSubselect').hide();
+        if(val) {
+            $('#example'+val).show();
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
