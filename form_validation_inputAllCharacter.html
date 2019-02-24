@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validations</title>
+    </head>
+    <body>
+        <form action="/">
+            <label>User Name</label>
+            <input type="text" name="Uname" placeholder="Enter User Name" required><br>
+            <label>Password</label>
+            <input type="password" name="Upwd" placeholder="Enter Password" id="password" required><br>
+            <label for="cP">Confirm Password</label>
+            <input type="password" name="Cpwd" placeholder="Enter Confirm Pass" id="confirm_password" required><br>
+            
+            
+            
+            <!-- Minimum eight characters, at least one letter, one number and one special character: -->
+            <label for="">Minimum eight characters, at least one letter, one number and one special character</label>
+            <input type="text" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required><br>
+
+            <!-- Minimum eight characters, at least one letter and one number: -->
+           <label for="">Minimum eight characters, at least one letter and one number</label>
+            <input type="text" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required><br>
+
+            
+            <!-- Minimum eight characters, at least one uppercase letter, one lowercase letter and one number: -->
+            <label for="">Minimum eight characters, at least one uppercase letter, one lowercase letter and one number</label>
+            <input type="text" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required><br>
+
+            <!-- Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:  -->
+            <label for="">Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</label>
+            <input type="text" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"><br>
+
+            <!-- 
+                Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character:
+             -->
+             <label for="">Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character:</label>
+             <input type="text" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$"><br>
+            <button type="submit">Confirm</button>
+        </form>
+
+        <script>
+              var password = document.getElementById("password")
+            , confirm_password = document.getElementById("confirm_password");
+            function validatePassword(){
+                if(password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+                } else {
+                confirm_password.setCustomValidity('');
+                }
+            }
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;       
+        </script>
+    </body>
+</html>
