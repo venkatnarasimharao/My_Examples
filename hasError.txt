@@ -1,0 +1,1 @@
+The hasError method will tell us if a particular error exists
