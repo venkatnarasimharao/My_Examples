@@ -1,0 +1,13 @@
+What Are Cold Observables?
+1. Cold observables are the ones that are explicitly invoked by the
+producer.
+2. Cold observables start running upon subscription, that is
+the observable sequence only starts pushing values to the observers
+when Subscribe is called. 
+ 
+
+What Are Hot Observables?
+1.  Hot Observableswill start the subscribing to the stream before waiting for the
+producer to send the signal to subscribe.
+2.they are already producing values even before a subscription is
+active.
