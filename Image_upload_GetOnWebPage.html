@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sample</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+            <input type="file" onchange="readURL(this);">
+            <br><br>
+            <img id="blah" src="uimg.png" alt="your image" width="200px" height="230px" />
+     <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
