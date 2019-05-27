@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="Nav_click_color.css">
+<script src="Nav_click_color.js"></script>
+<nav>
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        <li>
+            <a href="#">Support</a>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    for (var i = 0;i<3;i++) {
+        document.getElementsByTagName('a')[i].addEventListener("click", function () {
+            document.getElementsByTagName('a')[i].style.color = "yellow";
+        });
+        document.getElementsByTagName('a')[i].addEventListener("click", function () {
+            document.getElementsByTagName('a')[i].style.color = "black";
+        });
+    }
+</script>

@@ -1,0 +1,10 @@
+nav ul li{
+    display: inline;
+    margin-right:250px;
+}
+nav ul li a{
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: red;
+}
