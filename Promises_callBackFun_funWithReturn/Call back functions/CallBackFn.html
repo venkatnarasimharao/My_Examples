@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="CallBackFn.js"></script>
+</head>
+<body>
+    <input type="text" >
+    <input type="button" value="submit">
+    <script>
+        var noRef= document.querySelector('input:first-child');
+        var btnref = document.querySelector('[type="button"]');
+
+        btnref.addEventListener('click', function () {
+            var n=noRef.value;
+            debugger;
+            check(n, function (r) {
+                alert(r);
+            });
+        });
+    </script>
+</body>
+
+</html>
