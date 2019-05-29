@@ -1,0 +1,23 @@
+<html>
+    <head>
+            <script src="callBack.js"></script>
+    </head>
+   <body>
+        <input type="button" value="users"  onclick="fnGetUsers()">
+        <input type="button" value="post" onclick="fnGetPosts()">
+        <div id="res"></div>
+        <script>
+        function fnGetUsers(){
+            sendReq('http://jsonplaceholder.typicode.com/users',function(res){
+                document.getElementById('res').innerHTML=res;
+            })
+        }
+        function fnGetPosts(){
+            sendReq('http://jsonplaceholder.typicode.com/posts',function(res){
+                document.getElementById('res').innerHTML=res;
+            })
+        }
+        </script>
+
+</body>
+</html>
