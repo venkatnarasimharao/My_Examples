@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var students = [
+            { "name": "pr", "marks": 200 },
+            { "name": "sr", "marks": 300 },
+            { "name": "nr", "marks": 400 },
+            { "name": "vr", "marks": 100 },
+            { "name": "zr", "marks": 200 },
+            { "name": "xr", "marks": 300 },
+            { "name": "vs", "marks": 400 },
+            { "name": "qs", "marks": 100 }
+        ];
+        students.map(function (v, i) {
+            debugger;
+            if (v.marks > 200) {
+                v.isPassed = "true";
+            } else {
+                v.isPassed = "false";
+            }
+            return v;
+        });
+    </script>
+</body>
+
+</html>
