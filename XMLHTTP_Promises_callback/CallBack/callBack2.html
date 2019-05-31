@@ -1,0 +1,18 @@
+<html>
+    <head>
+            <script src="callBack.js"></script>
+    </head>
+   <body>
+        <input type="button" value="users"  onclick="fnGetUsers()">
+        <p></p>
+        <script>
+        function fnGetUsers(){
+            debugger;
+            sendReq('http://jsonplaceholder.typicode.com/users',function(res){
+                document.getElementsByTagName('p')[0].innerHTML=res;
+            })
+        }
+        </script>
+
+</body>
+</html>
