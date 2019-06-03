@@ -1,0 +1,18 @@
+<div id="ss">
+
+</div>
+<script>
+    var students = [
+        {"name": "pr","age": 16},
+        {"name": "sr","age": 17},
+        {"name": "nr","age": 18},
+        {"name": "vr","age": 19}
+    ];
+    var sum=0;
+    students.forEach(function(v,i){
+        debugger;
+       sum= v.age*2;
+       console.log(sum);
+       document.getElementById('ss').innerHTML=sum;
+    });
+</script>
