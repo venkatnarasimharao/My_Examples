@@ -1,0 +1,30 @@
+<script>
+    var students = [
+        {
+            "name": "pr",
+            "age": 16
+        },
+        {
+            "name": "sr",
+            "age": 17
+        },
+        {
+            "name": "nr",
+            "age": 18
+        },
+        {
+            "name": "vr",
+            "age": 19
+        }
+    ];
+    // filter Method
+    var res=students.filter(function (v, i) {
+        debugger;
+        if (v.age > 17) {
+         return v;
+        }
+    });
+    res.forEach(function(v,i){
+        document.write(v.name+ "--"  + v.age +"<br>");
+    })
+</script>

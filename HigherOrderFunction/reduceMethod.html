@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        JavaScript Array reduce() Method
+    </title>
+</head>
+<body>
+    <button onclick="reduceMethod()">
+        Click Here! reduceMethod
+    </button>
+    <br><br>
+    Sum: <span id="ss"></span>
+    <script>
+        var arr = [10, 20, 30, 40, 50, 60];
+        function reduceMethod(){
+            document.getElementById("ss").innerHTML= arr.reduce(function (sum,v){
+            debugger;
+            return sum+v;
+        })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<div></div>
+<script>
+    var students = [
+        {
+            "name": "pr",
+            "age": 16
+        },
+        {
+            "name": "sr",
+            "age": 17
+        },
+        {
+            "name": "nr",
+            "age": 18
+        },
+        {
+            "name": "vr",
+            "age": 19
+        }
+    ];
+    // map Method
+    students.map(function (v, i) {
+        debugger;
+        if (v.age > 17) {
+            v.isminor = false;
+        } else {
+            v.isminor = true;
+        }
+        return v;
+    });
+</script>

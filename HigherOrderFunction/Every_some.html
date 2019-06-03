@@ -1,0 +1,17 @@
+<script>
+ var students = [
+        {"name": "pr","age": 16},
+        {"name": "sr","age": 17},
+        {"name": "nr","age": 18},
+        {"name": "vr","age": 19}
+    ];
+    // every example
+    students.every(function(v,i){
+        return v.age >15;
+    });
+
+    // some 
+    students.some(function(v,i){
+        return v.age >17;
+    });
+</script>
