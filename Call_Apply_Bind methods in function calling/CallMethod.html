@@ -1,0 +1,73 @@
+<script>
+// if outside object want to make it availabe inside a function then we go for call or bind or apply
+// if we write a fn and call it and then in debugging mode if we use "this" it shows windows object
+function f1(){
+    debugger;
+}
+f1(); 
+// this 
+
+
+function f1(){
+    debugger;
+}
+var o={
+    'name':'sachin'
+};
+f1.call(o);
+//in debugget mode if u use 'this ' keyword it shows the current object is sachin
+
+//call function takes one or more arg
+//1st is object and remaining are as per function arguments
+
+
+//one object and one argument
+function f(a){
+    debugger;
+    console.log(this.num+a);
+}
+var n={
+    num:10
+};
+f.call(n,20);
+
+
+
+//one object and two argument
+function f(a,b){
+    debugger;
+    console.log(this.num+a+b);
+}
+var n={
+    num:10
+};
+f.call(n,20,30);
+
+
+//apply method takes two arguments one is object and another is array
+//array takes multiple number of elements
+//one object and two argument
+function f(a,b){
+    debugger;
+    console.log(this.num+a+b);
+}
+var n={
+    num:10
+};
+f.apply(n,[20,30]);
+
+
+
+
+//bind method internally countains one function in order to call we should call by two times ();
+function f(a){
+    debugger;
+    console.log(this.num+a);
+}
+var n={
+    num:10
+}
+var x=f.bind(n);
+x(10);
+
+</script>
