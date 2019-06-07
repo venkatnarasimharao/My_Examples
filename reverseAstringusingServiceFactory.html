@@ -1,0 +1,44 @@
+<script src="angular.min.js"></script>
+
+<body ng-app="myAPp">
+    <div ng-controller="ctrl1">
+        <input type="text" ng-model="inp">
+        <input type="button" value="SendData" ng-click="PostData()">
+
+        <br>
+        {{n1}}<br>
+        {{n2}}<br>
+        {{n5}}<br>
+        {{n4}}<br>
+        {{n3}}
+    </div>
+    <div></div>
+
+    <script>
+        var app = angular.module("myAPp", []);
+        app.controller("ctrl1", function ($scope, ser) {
+            debugger;
+            $scope.n1="Narasimha";
+            $scope.n2="prasanth";
+            $scope.n5=ser.PostData("prasanth");
+            $scope.n4="suresh";
+            $scope.n3=ser.PostData("suresh");
+            
+        });
+        /*
+        app.service('ser',function () {
+            this.PostData = function (inp) {
+                return inp.split('').reverse().splice(0,3).join('');
+            }
+        });
+        */
+
+        app.factory('ser',function(){
+            return{
+                'PostData':function(inp){
+                    return inp.split('').reverse().splice(0,3).join('');
+                }
+            }
+        })
+    </script>
+</body>
