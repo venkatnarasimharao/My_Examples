@@ -1,0 +1,19 @@
+<script src="angular.min.js"></script>
+
+<body ng-app="myAPp" ng-controller="ctrl1">
+    <input type="text" ng-model="inp">
+    <input type="button" value="Reverse" ng-click="PostData()">
+
+    <div ng-bind="res">
+
+    </div>
+    <script>
+        var app = angular.module("myAPp", []);
+        app.controller("ctrl1", function ($scope) {
+            debugger;
+            $scope.PostData=function(){
+                $scope.res = $scope.inp.split('').reverse().splice(0,3).join('');
+            }
+        });
+    </script>
+</body>
