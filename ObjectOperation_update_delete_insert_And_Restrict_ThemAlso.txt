@@ -1,0 +1,32 @@
+Object PreventExtensions-
+preventExtensions(-) available in Object.
+If JSON object is preventExtensions,then we are not able to perform insert oparation on that JSON object.
+We can perform update,delete oparations.
+
+Object seal
+
+seal(-) available in Object.
+If JSON object is seal,then we are not able to perform insert,delete oparations on that sealed JSON object.
+We can perform update oparation.
+
+
+Object Freeze
+
+freeze(-) available in Object.
+If JSON object is freezed,then we are not able to perform insert,update,delete oparations on that freezed JSON object.
+
+
+Get keys from Object
+
+By using keys(-) method in Object, we can get all the keys from JSON.
+keys(-) method return array of JSON object keys.
+Ex:
+
+var obj=}
+name:'sachin',
+runs:20000
+}
+
+var keys=Object.keys(obj)
+console.log(keys);
+Result: ['name','runs']
