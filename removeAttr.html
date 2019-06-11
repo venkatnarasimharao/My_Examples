@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function fnRemoveAttribute() {
+            var eleRef = document.querySelector('div');
+            eleRef.removeAttribute('id');
+            //it removes an attribute with the key id.
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">Hellow world</div>
+    <input type="button" value="remove attribute" onclick="fnRemoveAttribute()" />
+</body>
+</html>
