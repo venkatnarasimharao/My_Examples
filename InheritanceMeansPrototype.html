@@ -1,0 +1,27 @@
+<script>
+function f(){
+    debugger;
+    this.n1=20;
+    this.add=function(){
+        console.log(this.n1+this.n2);
+    }
+}
+
+var o=new f();
+
+
+this
+f {n1: 20, add: ƒ}add: ƒ ()n1: 20__proto__: Object
+undefined
+o
+f {n1: 20, add: ƒ}add: ƒ ()n1: 20__proto__: Object
+f.prototype
+{constructor: ƒ}constructor: ƒ f()__proto__: Object
+f.prototype.n2=10;
+10
+o.add();
+
+//30
+
+
+</script>
