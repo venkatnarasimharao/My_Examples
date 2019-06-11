@@ -1,0 +1,24 @@
+<script>
+// Object Freeze
+
+// freeze(-) available in Object.
+// If JSON object is freezed,then we are not able to perform insert,update,delete oparations on that freezed JSON object.
+// Ex:
+
+var obj={
+name:'sachin',
+runs:20000
+}
+
+Object.freeze(obj)
+obj.loc="Mumbai"//not inserted
+obj.name="dhoni";//not updated
+delete obj.age;//not deleted
+console.log(obj);
+// Result:
+// }
+// name:'sachin',
+// runs:20000
+// }
+// Note : obj is freezed, so we are not able to perform insert,udpate, delete oparations.
+</script>
