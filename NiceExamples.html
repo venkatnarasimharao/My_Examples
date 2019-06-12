@@ -1,0 +1,81 @@
+<script>
+(function (){
+    return typeof arguments;
+})();
+"object"
+
+(function (){
+    return typeof argum;
+})();
+"undefined"
+
+var f= function g(){
+    return 23;
+}
+undefined
+typeof g();
+// VM746:1 Uncaught ReferenceError: g is not defined
+//     at <anonymous>:1:1
+
+
+    var foo=function foo(){ debugger;
+    console.log(foo === foo);
+                      };
+undefined
+foo();
+//VM1164:2 true
+undefined
+function aaa(){
+    return {
+        test:1};
+}
+undefined
+alert(typeof aaa());
+undefined
+
+Number('1') - 1 ==0;
+true
+(true + false) > 2+ true;
+false
+
+
+
+
+function bar(){ debugger;
+    return foo;
+    foo=10;
+    function foo(){}
+    var foo='11';
+}
+alert(typeof bar());
+
+'1' - - '1';
+2
+
+
+
+var x=3;
+var foo={
+    x:2,
+    baz:{
+        x:1,
+        bar:function(){ return this.x }
+    }
+}
+var go=foo.baz.bar;
+alert(go());
+alert(foo.baz.bar());
+
+new String('im from ') instanceof String;
+true
+
+/*
+[]+[]+'foo'.split('');
+"f,o,o"
+*/
+
+
+
+
+
+</script>
