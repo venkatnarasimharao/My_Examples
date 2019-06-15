@@ -1,0 +1,30 @@
+<style>
+    div {
+        padding: 30px;
+        border: 1px solid red;
+    }
+    
+</style>
+
+<body>
+    <div id="div1">
+        div1
+        <div id="div2">
+            div2
+            <div id="div3">
+                div3
+            </div>
+        </div>
+    </div>
+    <script>
+        var divRef = document.getElementsByTagName('div');
+        for (var i = 0; i < divRef.length; i++) {
+            debugger;
+            divRef[i].addEventListener('click', function () {
+                alert(this.id);
+            }, false)
+        };
+        
+        // if we give true it is event capturing.
+    </script>
+</body>
