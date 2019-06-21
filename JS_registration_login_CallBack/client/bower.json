@@ -1,7 +1,0 @@
-{
-    "name":"myapp",
-    "dependencies": {
-        "bootstrap":"latest",
-        "jquery":"latest"
-    }
-}
