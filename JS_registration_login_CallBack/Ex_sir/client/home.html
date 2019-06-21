@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="styles.css">
+<script src="common.js"></script>
+<div class="header">Auth App</div>
+<span></span>
+<p><a href="update.html">Update</a><a href="delete.html">Delete</a></a></p>
+<div class="footer">&copy; rights belongs to me</div>
+<script>
+    function getUsers(){
+        sendReq(
+            'get',
+            'http://localhost:2020/users/users-list',
+            undefined,
+            function(res){
+                debugger;
+                var data=JSON.parse(res);
+                var rowData='';
+                data.forEach(function(o){
+                    rowData=rowData+ "<tr><td>"+o.uid+"</td><td>"+o.pwd+"</td><td>"+o.email+"</td><td>"+o.phone+"</td></tr>"
+                });
+
+                var tableData="<table border=1px><tr><th>Uid</th><th>Password</th><th>Email</th><th>Phone No</th></tr>"+rowData+"</table>";
+                document.querySelector('span').innerHTML=tableData
+            }
+        )
+    }
+
+    getUsers();
+</script>

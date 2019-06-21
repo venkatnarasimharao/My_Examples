@@ -1,0 +1,83 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/mdb.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/mycss.css">
+</head>
+<body>
+    <header class="text-center bg-info p-4 mb-5 text-white display-4">
+        SignUp
+    </header>
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="text-center m-2">
+                <p>
+                    User Name : <input type="text" class="text-center" id="uid">
+                </p>
+                <p>
+                    User password : <input type="password" class="text-center" id="pwd">
+                </p>
+                <p>
+                    Email : <input type="email" class="text-center" id="email">
+                </p>
+                <p>
+                    Phone number: <input type="number" class="text-center" pattern="[789][0-9]{9}" id="phone">
+                </p>
+                <p>
+                    <input type="button" value="SignUp" onclick="fnSignUp()" class="btn btn-success btn-lg">
+                    <a href="login.html" class="btn btn-outline-dark btn-lg">Login</a>
+                </p>
+                <p class="text-success">
+                    Success
+                </p>
+                <p class="text-danger">
+                    fail
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-info text-center mt-5">
+        <span>© 2018 Copyright:
+            <a href="#">Narasimha</a>
+        </span>
+    </footer>
+    <!-- Footer -->
+    <script src="CallBack.js"></script>
+    <script>
+        document.querySelector('p:nth-child(6)').style.display = "none";
+        document.querySelector('p:nth-child(7)').style.display = "none";
+        function fnSignUp() {
+            debugger;
+            var keys = ['uid', 'upwd', 'email', 'phone'];
+            var dataObj = {};
+            for (var i = 1; i <= keys.length; i++) {
+                var val = document.querySelector('p:nth-child(' + i + ')>input').value;
+                dataObj[keys[i - 1]] = val;
+                console.log(dataObj);
+            }
+            sendReq('post', 'http://localhost:2020/users/user-reg', dataObj, function (res) {
+                debugger;
+                console.log(res);
+                var data = JSON.parse(res);
+
+                // When receiving data from a web server, the data is always a string.
+
+                // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+                console.log(data);
+                if (data.affectedRows == 1) {
+                    document.querySelector('p:nth-child(6)').style.display = "block";
+                    dataObj={};
+                } else {
+                    document.querySelector('p:nth-child(7)').style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

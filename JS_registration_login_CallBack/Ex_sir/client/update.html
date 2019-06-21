@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="styles.css">
+<script src="common.js"></script>
+<div class="header">Auth App</div>
+<h1 class="text-center">Update</h1>
+
+
+<p class="text-center">
+    <span>User Name:</span>
+    <input id='uid' />
+    <input type="button" value='get user det' onclick="fnGetUserInfo()" />
+</p>
+<div id='udpate-info'>
+    <p class="text-center">
+        <span>Password:</span>
+        <input id="pwd" />
+    </p>
+
+    <p class="text-center">
+        <span>Email:</span>
+        <input id="email" />
+    </p>
+    <p class="text-center">
+        <span>Phone:</span>
+        <input id="phone" />
+    </p>
+    <p class="text-center">
+        <input type="button" value="update" onclick="fnUpdate()" />
+    </p>
+</div>
+<div class="footer">&copy; rights belongs to me</div>
+
+<script>
+    document.querySelector('#udpate-info').style.display = 'none';
+    var uidRef = document.querySelector('#uid');
+    var pwdRef = document.querySelector('#pwd');
+    var emailRef = document.querySelector('#email');
+    var phoneRef = document.querySelector('#phone');
+
+    function fnUpdate(){
+        var uid = uidRef.value;
+        var pwd = pwdRef.value;
+        var email = emailRef.value;
+        var phone = phoneRef.value;
+
+        var dataObj = {
+            "uid": uid,
+            "pwd": pwd,
+            "email": email,
+            "phone": phone
+        };
+
+        sendReq(
+            'post',
+            'http://localhost:2020/users/update-user',
+            dataObj,
+            function(res){
+                debugger;
+                var data=JSON.parse(res);
+                if(data.affectedRows == 1){
+                    alert('updated successfully');
+                    location.href='home.html';
+                }else{
+                    alert('not updated...try again');
+                }
+            }
+        )
+
+    }
+    function fnGetUserInfo() {
+        var uid = uidRef.value;
+        sendReq(
+            'get',
+            'http://localhost:2020/users/user-info?uid=' + uid,
+            undefined,
+            function (res) {
+                debugger;
+                var data = JSON.parse(res);
+                if (data.length == 0) {
+                    alert('user not found');
+                    document.querySelector('#udpate-info').style.display = 'none';
+                } else {
+                    document.querySelector('#udpate-info').style.display = 'block';
+                    var userObj=data[0];
+                    pwdRef.value=userObj.pwd;
+                    emailRef.value=userObj.email;
+                    phoneRef.value=userObj.phone;
+                }
+            }
+        )
+    }
+</script>

@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="bower_components/bootstrap/mycss.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/bootstrap/mdb.css">
+<header class="text-center bg-info p-4 mb-5 text-white display-4">
+    Login
+</header>
+<div class="row">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8">
+        <div class="text-center m-2">
+            <p>
+                User Name : <input type="text" class="text-center">
+            </p>
+            <p>
+                User password : <input type="password" class="text-center">
+            </p>
+            <p>
+                <input type="button" value="Login" onclick="fnSignUp()" class="btn btn-success btn-lg">
+                <a href="SignUp.html" class="btn btn-outline-dark btn-lg">SignUp</a>
+            </p>
+            <p class="text-danger">
+                Please check User Name & Password
+            </p>
+        </div>
+
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small bg-info text-center mt-5">
+    <span>© 2018 Copyright:
+        <a href="#">Narasimha</a>
+    </span>
+</footer>
+<!-- Footer -->
+<script src="CallBack.js"></script>
+<script>
+    document.querySelector('p:nth-child(4)').style.display = "none";
+    function fnSignUp() {
+        debugger;
+        var keys = ['uid','upwd'];
+        var data = {};
+        for (var i = 1; i <= keys.length; i++) {
+            var val = document.querySelector('p:nth-child(' + i + ')>input').value;
+            data[keys[i - 1]] = val;
+            console.log(data);
+        }
+        sendReq('post', 'http://localhost:2020/users/login-check', data, function(res){
+                var data=JSON.parse(res);
+                if(data.length > 0){
+                    location.href='home.html';
+                }else{
+                    document.querySelector('p:nth-child(4)').style.display = "block";
+                }
+            }
+        );
+
+    }
+</script>

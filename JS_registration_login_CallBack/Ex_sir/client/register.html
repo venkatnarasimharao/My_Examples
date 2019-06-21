@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="styles.css">
+<script src="common.js"></script>
+<div class="header">Auth App</div>
+<h1 class="text-center">Registration</h1>
+
+<p class="text-center">
+    <span>User Name:</span>
+    <input id='uid' />
+</p>
+<p class="text-center">
+    <span>Password:</span>
+    <input id="pwd" />
+</p>
+
+<p class="text-center">
+    <span>Email:</span>
+    <input id="email" />
+</p>
+<p class="text-center">
+    <span>Phone:</span>
+    <input id="phone" />
+</p>
+<p class="text-center">
+    <input type="button" value="Reigster" onclick="fnReg()" />
+    <a href="login.html">go to Login</a>
+</p>
+
+<div class="footer">&copy; rights belongs to me</div>
+
+<script>
+    function fnReg() {
+        var uidRef = document.querySelector('#uid');
+        var pwdRef = document.querySelector('#pwd');
+        var emailRef = document.querySelector('#email');
+        var phoneRef = document.querySelector('#phone');
+
+        var uid = uidRef.value;
+        var pwd = pwdRef.value;
+        var email = emailRef.value;
+        var phone = phoneRef.value;
+
+        var dataObj = {
+            "uid": uid,
+            "pwd": pwd,
+            "email": email,
+            "phone": phone
+        };
+
+        sendReq(
+            'post',
+            'http://localhost:2020/users/user-reg',
+            dataObj,
+            function(res){
+                debugger;
+                var data=JSON.parse(res);
+                if(data.affectedRows == 1){
+                    alert('successfully inserted');
+                    uidRef.value='';
+                    pwdRef.value='';
+                    emailRef.value='';
+                    phoneRef.value='';
+                }else{
+                    alert('not inseted...please try again');
+                }
+            }
+        )
+
+
+
+
+    }
+</script>

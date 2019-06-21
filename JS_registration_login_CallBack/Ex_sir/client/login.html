@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="styles.css">
+<script src="common.js"></script>
+<div class="header">Auth App</div>
+<h1 class="text-center">Login</h1>
+
+<p class="text-center">
+    <span>User Name:</span>
+    <input id="uid" />
+</p>
+<p class="text-center">
+    <span>Password:</span>
+    <input id="pwd" />
+</p>
+<p class="text-center">
+    <input type="button" value="Login" onclick="fnLogin()" />
+    <a href="register.html">to register</a>
+</p>
+
+<div class="footer">&copy; rights belongs to me</div>
+
+<script>
+    function fnLogin() {
+        var uidRef = document.querySelector('#uid');
+        var pwdRef = document.querySelector('#pwd');
+
+        var uid = uidRef.value;
+        var pwd = pwdRef.value;
+
+        var dataObj = {
+            "uid":uid,
+            "pwd":pwd
+        }
+
+        sendReq(
+            'post',
+            'http://localhost:2020/users/login-check',
+            dataObj,
+            function(res){
+                var data=JSON.parse(res);
+                if(data.length > 0){
+                    location.href='home.html';
+                }else{
+                    alert('please check u r entered uid or pwd');
+                }
+            }
+        )
+
+    }
+</script>

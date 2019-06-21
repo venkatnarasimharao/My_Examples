@@ -1,0 +1,21 @@
+.header{
+    text-align: center;
+    background: yellow;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+body{
+    margin: 0
+}
+
+.text-center{
+    text-align: center;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    background: yellow;
+    width: 100%;
+    text-align: center;
+}

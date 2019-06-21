@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="bower_components/bootstrap/mycss.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/bootstrap/mdb.css">
+<header class="text-center bg-info p-4 text-white display-4">
+    Home Page
+</header>
+<div class="text-right mb-5">
+    <button class="mt-0 btn btn-danger">LogOut</button>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8 display-4">
+        <table class="table">
+            <thead class="table-info">
+                <tr>
+                    <th scope="col">UId</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-2">
+        <a href="update.html">
+            <button class="btn btn-info">Update</button>
+        </a>
+        <a href="delete.html">
+            <button class="btn btn-danger">Delete</button>
+        </a>
+    </div>
+
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small bg-info text-center mt-5">
+    <span>© 2018 Copyright:
+        <a href="#">Narasimha</a>
+    </span>
+</footer>
+<!-- Footer -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="CallBack.js"></script>
+<script>
+    function fnGetUsers() {
+        debugger;
+        sendReq('get', 'http://localhost:2020/users/get-user', undefined, function (res) {
+            var data = JSON.parse(res);
+
+            var temp = '';
+            console.log(data.length);
+            for (var i = 0; i < data.length; i++) {
+                temp += '<tr><td>' + data[i].uid + '</td>';
+                temp += '<td>' + data[i].upwd + '</td>';
+                temp += '<td>' + data[i].email + '</td>';
+                temp += '<td>' + data[i].phone + '</td></tr>';
+            }
+            console.log(temp);
+            document.getElementById('tbody').innerHTML = temp;
+        }
+        );
+    }
+    fnGetUsers();
+</script>
