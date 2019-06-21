@@ -138,8 +138,6 @@ router.post('/update-user',function(req,res){
         }else{
           res.send(r);
         }
-    })
-
-
+    });
 })
 module.exports = router;
