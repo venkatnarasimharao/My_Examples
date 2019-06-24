@@ -1,0 +1,50 @@
+<script>
+    //gives the output bcz function is named
+    f();
+function f(){
+	alert('s');
+}
+
+//append
+
+
+
+var str='afnjnaakjdjaa';
+str.replace('a','z');
+//output  zfnjnaakjdjaa     we want all a as z so then go for regular expression
+//regular expressions
+str.replace(/a/g,'z');
+
+var st='my name is narasimha my phone number is 99999999999 and my pin code is 34323';
+st.replace(/[0-9]/g,'x')
+
+//output my name is narasimha my phone number is xxxxxxxxxx and my pin code is xxxxx
+
+st.replace(/[0-9]+/g,'XXX')
+//output my name is narasimha my phone number is XXX and my pin code is XXX
+
+st.replace(/[a-z]{5}/g,'******')
+
+
+//Regular expression match
+st.match(/\d+/g);
+
+
+var stri="abc 123 def 456 ghi 789";
+
+stri.split(/\d+/);
+(4) ["abc ", " def ", " ghi ", ""]
+stri.split(/[a-z]+/);
+(4) ["", " 123 ", " 456 ", " 789"]
+
+
+//variable hosting inside we have method
+
+//here var a; will goes top of a() so it is undefined , it will consider as varibale
+a();
+var a=function(){
+	alert('d');
+}
+// VM464:1 Uncaught TypeError: a is not a function
+//     at <anonymous>:1:1
+</script>
